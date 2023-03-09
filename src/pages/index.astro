@@ -1,81 +1,111 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
+import "../app.css";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+  <main>
+    <Header />
+    <h1 class="mb-6">Hello,there 👋</h1>
+    <div class="mb-12">
+      <p class="mb-4">❤️ I'm a Front-end developer</p>
+      <p class="mb-4">
+        🌱 I’m currently learning vite nestjs typescript react vue3 and
+        something about engineering
+      </p>
+      <p class="mb-4">🤔 emmmmm I want to find a new job</p>
+    </div>
+
+    <div class="flex justify-start item-center m-t2 m-b2" f-c>
+      <a
+        href="https://github.com/jmni-cn"
+        class="icon-h flex p-1 rounded-1 flex justify-center item-center"
+        target="_blank"
+      >
+        <div i-carbon-logo-github w-8 text-xl></div>Github</a
+      >
+      <a
+        href="//blog.jmni.cn"
+        class="icon-h flex p-1 rounded-1 flex justify-center item-center"
+        target="_blank"
+      >
+        <div i-carbon-blog w-8 text-xl></div>Blog</a
+      >
+      <div class="icon-h text-3xl ml-4 w-8 h-8 rounded-1">
+        <a
+          i-carbon-logo-twitter
+          class="flex w-full h-8"
+          href="https://twitter.com/jmni_zh"
+          target="_blank"></a>
+      </div>
+
+      <!-- <span class="w-8 ml-4 rounded-2 hover" style="overflow: hidden;">
+			  <img class="w-full" src="//static.jmni.cn/blog/img/30acc295946741bd990e7df910d6b34c.png" alt="赞赏一下~">
+			  <div class="absolute w-36% right-10 rounded-6 qrcode" style="overflow: hidden;">
+				<img src="//static.jmni.cn/blog/img/6bf8cf59d55d48d4870361413a586421.jpg" alt="赞赏一下~">
+			  </div>
+			</span> -->
+    </div>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="//chat.jmni.cn/"
+        title="Chatgpt"
+        body="可以生成自然语言文本，例如回答问题、提供建议、进行对话等等"
+      />
+      <Card
+        href="//blog.jmni.cn"
+        title="blog"
+        body="记录学习工作中遇到的问题"
+      />
+    </ul>
+    <Footer />
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 80ch;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
 </style>

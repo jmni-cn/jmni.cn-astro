@@ -1,0 +1,12 @@
+.item-center{
+    align-items: center;
+}
+.translate{
+    transform: translate(-50%);
+}
+.qrcode{
+    display: none;
+}
+.hover:hover .qrcode{
+    display: block;
+}
